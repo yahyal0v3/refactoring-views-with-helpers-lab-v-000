@@ -1,6 +1,10 @@
 module ArtistsHelper
 
   def display_artist(song)
-    song.artist_name if song.artist
+    if song.artist
+      song.artist_name 
+    else 
+      edit_song_path(song)
+    end 
   end
 end
